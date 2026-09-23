@@ -43,19 +43,19 @@ The domain applications are intentionally broader than their initial reference p
 
 **ForgeOpt** applies VarOpt to manufacturing systems, with spacecraft manufacturing as the initial reference domain.
 
-[ForgeOpt README](domains/forgeopt/README.md)
+[ForgeOpt README](domains/ForgeOpt/README.md)
 
 ### NavOpt
 
 **NavOpt** applies VarOpt to navigation and voyage optimization. Maritime voyage optimization is the initial reference domain, while the architecture is intended to support other navigation and routing problems.
 
-[NavOpt README](domains/navopt/README.md)
+[NavOpt README](domains/NavOpt/README.md)
 
 ### NexaOpt
 
 **NexaOpt** applies VarOpt to networked and distributed systems. Energy grid operations provide the initial reference domain, while the architecture is intended to support other networked physical systems, including water and resource-distribution networks.
 
-[NexaOpt README](domains/nexaopt/README.md)
+[NexaOpt README](domains/NexaOpt/README.md)
 
 ## Platform Architecture
 
@@ -103,7 +103,7 @@ The detailed definitions and architectural relationships are maintained in the V
 
 The authoritative system definition is maintained in:
 
-[VarOpt SDS](docs/sds/varopt-sds.md)
+[VarOpt SDS](docs/sds/VarOpt_Phase_0_SDS.md)
 
 Additional documentation will be developed as the implementation matures, including:
 
