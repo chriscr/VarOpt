@@ -1,4 +1,4 @@
-# Optimization Platform — Phase 0 System Definition Specification (SDS)
+# VarOpt — Phase 0 System Definition Specification (SDS)
 
 **Document status:** LOCKED — Architectural Baseline  
 **Phase:** Phase 0 — Architecture  
