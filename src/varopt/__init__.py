@@ -1,0 +1,1 @@
+"""VarOpt — Domain-Agnostic Optimization Platform."""
