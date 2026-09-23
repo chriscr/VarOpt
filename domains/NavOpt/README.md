@@ -9,9 +9,9 @@ assets/logos/navopt-logo.png
 
 When the logo asset is available, use:
 
-![NavOpt](../assets/logos/navopt-logo.png)
+![NavOpt](../../assets/logos/navopt-logo.png)
 -->
-![NavOpt](../assets/logos/navopt-logo.png)
+![NavOpt](../../assets/logos/navopt-logo.png)
 
 ## Overview
 

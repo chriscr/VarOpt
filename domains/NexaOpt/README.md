@@ -9,9 +9,9 @@ assets/logos/nexaopt-logo.png
 
 When the logo asset is available, use:
 
-![NexaOpt](../assets/logos/nexaopt-logo.png)
+![NexaOpt](../../assets/logos/nexaopt-logo.png)
 -->
-![NexaOpt](../assets/logos/nexaopt-logo.png)
+![NexaOpt](../../assets/logos/nexaopt-logo.png)
 
 ## Overview
 
