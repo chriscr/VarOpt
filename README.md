@@ -5,12 +5,14 @@
 <!--
 Logo
 Proposed location:
-assets/logos/varopt-logo.svg
+assets/logos/varopt-logo.png
 
 When the logo asset is available, use:
 
-![VarOpt](assets/logos/varopt-logo.svg)
+![VarOpt](assets/logos/varopt-logo.png)
 -->
+
+![VarOpt](assets/logos/varopt-logo.png)
 
 ## Overview
 

@@ -5,12 +5,14 @@
 <!--
 Logo
 Proposed location:
-assets/logos/forgeopt-logo.svg
+assets/logos/forgeopt-logo.png
 
 When the logo asset is available, use:
 
-![ForgeOpt](assets/logos/forgeopt-logo.svg)
+![ForgeOpt](assets/logos/forgeopt-logo.png)
 -->
+![ForgeOpt](assets/logos/forgeopt-logo.png)
+
 
 ## Overview
 
