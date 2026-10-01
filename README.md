@@ -154,187 +154,187 @@ src/        VarOpt source code
 tests/      Platform and cross-domain validation
 
 VarOpt/
-¦
+Â¦
 +-- README.md
 +-- LICENSE
 +-- pyproject.toml
 +-- .gitignore
-¦
+Â¦
 +-- assets/
-¦   +-- logos/
-¦       +-- varopt-logo.png
-¦       +-- forgeopt-logo.png
-¦       +-- navopt-logo.png
-¦       +-- nexaopt-logo.png
-¦
+Â¦   +-- logos/
+Â¦       +-- varopt-logo.png
+Â¦       +-- forgeopt-logo.png
+Â¦       +-- navopt-logo.png
+Â¦       +-- nexaopt-logo.png
+Â¦
 +-- docs/
-¦   ¦
-¦   +-- sds/
-¦   ¦   +-- varopt-sds.md
-¦   ¦
-¦   +-- architecture/
-¦   ¦   +-- system-architecture.md
-¦   ¦   +-- software-architecture.md
-¦   ¦   +-- component-model.md
-¦   ¦   +-- architecture-decisions/
-¦   ¦       +-- README.md
-¦   ¦
-¦   +-- science/
-¦   ¦   +-- scientific-foundations.md
-¦   ¦   +-- mathematical-foundations.md
-¦   ¦   +-- model-validation.md
-¦   ¦
-¦   +-- optimization/
-¦   ¦   +-- decision-space.md
-¦   ¦   +-- optimization.md
-¦   ¦   +-- evaluation.md
-¦   ¦   +-- simulation.md
-¦   ¦   +-- replanning.md
-¦   ¦
-¦   +-- development/
-¦   ¦   +-- development-guide.md
-¦   ¦   +-- testing.md
-¦   ¦   +-- contributing.md
-¦   ¦
-¦   +-- validation/
-¦       +-- validation-methodology.md
-¦       +-- cross-domain-validation.md
-¦       +-- benchmarks.md
-¦
+Â¦   Â¦
+Â¦   +-- sds/
+Â¦   Â¦   +-- varopt-sds.md
+Â¦   Â¦
+Â¦   +-- architecture/
+Â¦   Â¦   +-- system-architecture.md
+Â¦   Â¦   +-- software-architecture.md
+Â¦   Â¦   +-- component-model.md
+Â¦   Â¦   +-- architecture-decisions/
+Â¦   Â¦       +-- README.md
+Â¦   Â¦
+Â¦   +-- science/
+Â¦   Â¦   +-- scientific-foundations.md
+Â¦   Â¦   +-- mathematical-foundations.md
+Â¦   Â¦   +-- model-validation.md
+Â¦   Â¦
+Â¦   +-- optimization/
+Â¦   Â¦   +-- decision-space.md
+Â¦   Â¦   +-- optimization.md
+Â¦   Â¦   +-- evaluation.md
+Â¦   Â¦   +-- simulation.md
+Â¦   Â¦   +-- replanning.md
+Â¦   Â¦
+Â¦   +-- development/
+Â¦   Â¦   +-- development-guide.md
+Â¦   Â¦   +-- testing.md
+Â¦   Â¦   +-- contributing.md
+Â¦   Â¦
+Â¦   +-- validation/
+Â¦       +-- validation-methodology.md
+Â¦       +-- cross-domain-validation.md
+Â¦       +-- benchmarks.md
+Â¦
 +-- src/
-¦   ¦
-¦   +-- varopt/
-¦       ¦
-¦       +-- __init__.py
-¦       ¦
-¦       +-- decision/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- decision_space.py
-¦       ¦   +-- decision_set.py
-¦       ¦   +-- decision_variables.py
-¦       ¦
-¦       +-- optimization/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- optimizer.py
-¦       ¦   +-- objectives.py
-¦       ¦   +-- constraints.py
-¦       ¦   +-- search.py
-¦       ¦
-¦       +-- evaluation/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- evaluator.py
-¦       ¦   +-- evaluation_result.py
-¦       ¦
-¦       +-- simulation/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- simulator.py
-¦       ¦   +-- system_state.py
-¦       ¦   +-- simulation_result.py
-¦       ¦
-¦       +-- performance/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- performance_model.py
-¦       ¦
-¦       +-- dynamics/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- dynamic_system.py
-¦       ¦
-¦       +-- replanning/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- replanner.py
-¦       ¦   +-- replanning_context.py
-¦       ¦
-¦       +-- models/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- domain_model.py
-¦       ¦
-¦       +-- interfaces/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- optimizer.py
-¦       ¦   +-- evaluator.py
-¦       ¦   +-- simulator.py
-¦       ¦   +-- performance_model.py
-¦       ¦   +-- domain.py
-¦       ¦
-¦       +-- common/
-¦           +-- __init__.py
-¦           +-- types.py
-¦           +-- time.py
-¦           +-- units.py
-¦           +-- errors.py
-¦
+Â¦   Â¦
+Â¦   +-- varopt/
+Â¦       Â¦
+Â¦       +-- __init__.py
+Â¦       Â¦
+Â¦       +-- decision/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- decision_space.py
+Â¦       Â¦   +-- decision_set.py
+Â¦       Â¦   +-- decision_variables.py
+Â¦       Â¦
+Â¦       +-- optimization/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- optimizer.py
+Â¦       Â¦   +-- objectives.py
+Â¦       Â¦   +-- constraints.py
+Â¦       Â¦   +-- search.py
+Â¦       Â¦
+Â¦       +-- evaluation/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- evaluator.py
+Â¦       Â¦   +-- evaluation_result.py
+Â¦       Â¦
+Â¦       +-- simulation/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- simulator.py
+Â¦       Â¦   +-- system_state.py
+Â¦       Â¦   +-- simulation_result.py
+Â¦       Â¦
+Â¦       +-- performance/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- performance_model.py
+Â¦       Â¦
+Â¦       +-- dynamics/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- dynamic_system.py
+Â¦       Â¦
+Â¦       +-- replanning/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- replanner.py
+Â¦       Â¦   +-- replanning_context.py
+Â¦       Â¦
+Â¦       +-- models/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- domain_model.py
+Â¦       Â¦
+Â¦       +-- interfaces/
+Â¦       Â¦   +-- __init__.py
+Â¦       Â¦   +-- optimizer.py
+Â¦       Â¦   +-- evaluator.py
+Â¦       Â¦   +-- simulator.py
+Â¦       Â¦   +-- performance_model.py
+Â¦       Â¦   +-- domain.py
+Â¦       Â¦
+Â¦       +-- common/
+Â¦           +-- __init__.py
+Â¦           +-- types.py
+Â¦           +-- time.py
+Â¦           +-- units.py
+Â¦           +-- errors.py
+Â¦
 +-- domains/
-¦   ¦
-¦   +-- forgeopt/
-¦   ¦   +-- README.md
-¦   ¦   +-- src/
-¦   ¦   ¦   +-- forgeopt/
-¦   ¦   ¦       +-- __init__.py
-¦   ¦   ¦       +-- domain/
-¦   ¦   ¦       +-- models/
-¦   ¦   ¦       +-- optimization/
-¦   ¦   ¦       +-- simulation/
-¦   ¦   ¦       +-- performance/
-¦   ¦   +-- tests/
-¦   ¦   +-- docs/
-¦   ¦
-¦   +-- navopt/
-¦   ¦   +-- README.md
-¦   ¦   +-- src/
-¦   ¦   ¦   +-- navopt/
-¦   ¦   ¦       +-- __init__.py
-¦   ¦   ¦       +-- domain/
-¦   ¦   ¦       +-- models/
-¦   ¦   ¦       +-- optimization/
-¦   ¦   ¦       +-- simulation/
-¦   ¦   ¦       +-- performance/
-¦   ¦   +-- tests/
-¦   ¦   +-- docs/
-¦   ¦
-¦   +-- nexaopt/
-¦       +-- README.md
-¦       +-- src/
-¦       ¦   +-- nexaopt/
-¦       ¦       +-- __init__.py
-¦       ¦       +-- domain/
-¦       ¦       +-- models/
-¦       ¦       +-- optimization/
-¦       ¦       +-- simulation/
-¦       ¦       +-- performance/
-¦       +-- tests/
-¦       +-- docs/
-¦
+Â¦   Â¦
+Â¦   +-- forgeopt/
+Â¦   Â¦   +-- README.md
+Â¦   Â¦   +-- src/
+Â¦   Â¦   Â¦   +-- forgeopt/
+Â¦   Â¦   Â¦       +-- __init__.py
+Â¦   Â¦   Â¦       +-- domain/
+Â¦   Â¦   Â¦       +-- models/
+Â¦   Â¦   Â¦       +-- optimization/
+Â¦   Â¦   Â¦       +-- simulation/
+Â¦   Â¦   Â¦       +-- performance/
+Â¦   Â¦   +-- tests/
+Â¦   Â¦   +-- docs/
+Â¦   Â¦
+Â¦   +-- navopt/
+Â¦   Â¦   +-- README.md
+Â¦   Â¦   +-- src/
+Â¦   Â¦   Â¦   +-- navopt/
+Â¦   Â¦   Â¦       +-- __init__.py
+Â¦   Â¦   Â¦       +-- domain/
+Â¦   Â¦   Â¦       +-- models/
+Â¦   Â¦   Â¦       +-- optimization/
+Â¦   Â¦   Â¦       +-- simulation/
+Â¦   Â¦   Â¦       +-- performance/
+Â¦   Â¦   +-- tests/
+Â¦   Â¦   +-- docs/
+Â¦   Â¦
+Â¦   +-- nexaopt/
+Â¦       +-- README.md
+Â¦       +-- src/
+Â¦       Â¦   +-- nexaopt/
+Â¦       Â¦       +-- __init__.py
+Â¦       Â¦       +-- domain/
+Â¦       Â¦       +-- models/
+Â¦       Â¦       +-- optimization/
+Â¦       Â¦       +-- simulation/
+Â¦       Â¦       +-- performance/
+Â¦       +-- tests/
+Â¦       +-- docs/
+Â¦
 +-- tests/
-¦   ¦
-¦   +-- unit/
-¦   ¦   +-- decision/
-¦   ¦   +-- optimization/
-¦   ¦   +-- evaluation/
-¦   ¦   +-- simulation/
-¦   ¦   +-- performance/
-¦   ¦   +-- replanning/
-¦   ¦
-¦   +-- integration/
-¦   ¦   +-- optimization/
-¦   ¦   +-- simulation/
-¦   ¦   +-- replanning/
-¦   ¦
-¦   +-- cross_domain/
-¦   ¦   +-- forgeopt/
-¦   ¦   +-- navopt/
-¦   ¦   +-- nexaopt/
-¦   ¦
-¦   +-- validation/
-¦       +-- reference_problems/
-¦       +-- benchmarks/
-¦       +-- regression/
-¦
+Â¦   Â¦
+Â¦   +-- unit/
+Â¦   Â¦   +-- decision/
+Â¦   Â¦   +-- optimization/
+Â¦   Â¦   +-- evaluation/
+Â¦   Â¦   +-- simulation/
+Â¦   Â¦   +-- performance/
+Â¦   Â¦   +-- replanning/
+Â¦   Â¦
+Â¦   +-- integration/
+Â¦   Â¦   +-- optimization/
+Â¦   Â¦   +-- simulation/
+Â¦   Â¦   +-- replanning/
+Â¦   Â¦
+Â¦   +-- cross_domain/
+Â¦   Â¦   +-- forgeopt/
+Â¦   Â¦   +-- navopt/
+Â¦   Â¦   +-- nexaopt/
+Â¦   Â¦
+Â¦   +-- validation/
+Â¦       +-- reference_problems/
+Â¦       +-- benchmarks/
+Â¦       +-- regression/
+Â¦
 +-- examples/
-¦   +-- basic/
-¦   +-- optimization/
-¦   +-- dynamic/
-¦   +-- cross_domain/
-¦
+Â¦   +-- basic/
+Â¦   +-- optimization/
+Â¦   +-- dynamic/
+Â¦   +-- cross_domain/
+Â¦
 +-- scripts/
     +-- development/
     +-- validation/
