@@ -2,6 +2,7 @@
 
 from .core import (
     CandidateDecision,
+    CallableEvaluation,
     Constraint,
     DecisionSpace,
     Evaluation,
@@ -16,6 +17,7 @@ __version__ = "0.1.0"
 
 __all__ = [
     "CandidateDecision",
+    "CallableEvaluation",
     "Constraint",
     "DecisionSpace",
     "Evaluation",
