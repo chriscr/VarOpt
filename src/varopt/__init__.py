@@ -10,7 +10,10 @@ from .core import (
     EvaluationStatus,
     Objective,
     ObjectiveSense,
+    Optimizer,
     OptimizationProblem,
+    OptimizationResult,
+    OptimizationStatus,
 )
 
 __version__ = "0.1.0"
@@ -25,5 +28,8 @@ __all__ = [
     "EvaluationStatus",
     "Objective",
     "ObjectiveSense",
+    "Optimizer",
     "OptimizationProblem",
+    "OptimizationResult",
+    "OptimizationStatus",
 ]

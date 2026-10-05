@@ -7,6 +7,7 @@ from .decision_space import DecisionSpace
 from .evaluation import Evaluation
 from .evaluation_result import EvaluationResult, EvaluationStatus
 from .objective import Objective, ObjectiveSense
+from .optimizer import OptimizationResult, OptimizationStatus, Optimizer
 from .problem import OptimizationProblem
 
 __all__ = [
@@ -19,5 +20,8 @@ __all__ = [
     "EvaluationStatus",
     "Objective",
     "ObjectiveSense",
+    "Optimizer",
     "OptimizationProblem",
+    "OptimizationResult",
+    "OptimizationStatus",
 ]
