@@ -143,203 +143,95 @@ Domain independence will be demonstrated through application across substantiall
 
 ## Repository Organization
 
-The repository contains the VarOpt platform together with its domain applications.
+VarOpt uses a Python `src/` package layout. The repository separates the domain-agnostic optimization platform from experimental optimization approaches, automated tests, and phase-specific documentation.
+
+The implementation is developed incrementally. Completed phases establish a tested baseline, while experiments are kept separate from the core platform unless their general applicability and architectural role justify further integration.
+
+### Repository Structure
 
 ```text
-assets/     Images
-docs/       System and technical documentation
-domains/    ForgeOpt, NavOpt, and NexaOpt
-examples/   VarOpt examples
-src/        VarOpt source code
-tests/      Platform and cross-domain validation
-
 VarOpt/
-¦
-+-- README.md
-+-- LICENSE
-+-- pyproject.toml
-+-- .gitignore
-¦
-+-- assets/
-¦   +-- logos/
-¦       +-- varopt-logo.png
-¦       +-- forgeopt-logo.png
-¦       +-- navopt-logo.png
-¦       +-- nexaopt-logo.png
-¦
-+-- docs/
-¦   ¦
-¦   +-- sds/
-¦   ¦   +-- varopt-sds.md
-¦   ¦
-¦   +-- architecture/
-¦   ¦   +-- system-architecture.md
-¦   ¦   +-- software-architecture.md
-¦   ¦   +-- component-model.md
-¦   ¦   +-- architecture-decisions/
-¦   ¦       +-- README.md
-¦   ¦
-¦   +-- science/
-¦   ¦   +-- scientific-foundations.md
-¦   ¦   +-- mathematical-foundations.md
-¦   ¦   +-- model-validation.md
-¦   ¦
-¦   +-- optimization/
-¦   ¦   +-- decision-space.md
-¦   ¦   +-- optimization.md
-¦   ¦   +-- evaluation.md
-¦   ¦   +-- simulation.md
-¦   ¦   +-- replanning.md
-¦   ¦
-¦   +-- development/
-¦   ¦   +-- development-guide.md
-¦   ¦   +-- testing.md
-¦   ¦   +-- contributing.md
-¦   ¦
-¦   +-- validation/
-¦       +-- validation-methodology.md
-¦       +-- cross-domain-validation.md
-¦       +-- benchmarks.md
-¦
-+-- src/
-¦   ¦
-¦   +-- varopt/
-¦       ¦
-¦       +-- __init__.py
-¦       ¦
-¦       +-- decision/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- decision_space.py
-¦       ¦   +-- decision_set.py
-¦       ¦   +-- decision_variables.py
-¦       ¦
-¦       +-- optimization/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- optimizer.py
-¦       ¦   +-- objectives.py
-¦       ¦   +-- constraints.py
-¦       ¦   +-- search.py
-¦       ¦
-¦       +-- evaluation/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- evaluator.py
-¦       ¦   +-- evaluation_result.py
-¦       ¦
-¦       +-- simulation/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- simulator.py
-¦       ¦   +-- system_state.py
-¦       ¦   +-- simulation_result.py
-¦       ¦
-¦       +-- performance/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- performance_model.py
-¦       ¦
-¦       +-- dynamics/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- dynamic_system.py
-¦       ¦
-¦       +-- replanning/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- replanner.py
-¦       ¦   +-- replanning_context.py
-¦       ¦
-¦       +-- models/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- domain_model.py
-¦       ¦
-¦       +-- interfaces/
-¦       ¦   +-- __init__.py
-¦       ¦   +-- optimizer.py
-¦       ¦   +-- evaluator.py
-¦       ¦   +-- simulator.py
-¦       ¦   +-- performance_model.py
-¦       ¦   +-- domain.py
-¦       ¦
-¦       +-- common/
-¦           +-- __init__.py
-¦           +-- types.py
-¦           +-- time.py
-¦           +-- units.py
-¦           +-- errors.py
-¦
-+-- domains/
-¦   ¦
-¦   +-- forgeopt/
-¦   ¦   +-- README.md
-¦   ¦   +-- src/
-¦   ¦   ¦   +-- forgeopt/
-¦   ¦   ¦       +-- __init__.py
-¦   ¦   ¦       +-- domain/
-¦   ¦   ¦       +-- models/
-¦   ¦   ¦       +-- optimization/
-¦   ¦   ¦       +-- simulation/
-¦   ¦   ¦       +-- performance/
-¦   ¦   +-- tests/
-¦   ¦   +-- docs/
-¦   ¦
-¦   +-- navopt/
-¦   ¦   +-- README.md
-¦   ¦   +-- src/
-¦   ¦   ¦   +-- navopt/
-¦   ¦   ¦       +-- __init__.py
-¦   ¦   ¦       +-- domain/
-¦   ¦   ¦       +-- models/
-¦   ¦   ¦       +-- optimization/
-¦   ¦   ¦       +-- simulation/
-¦   ¦   ¦       +-- performance/
-¦   ¦   +-- tests/
-¦   ¦   +-- docs/
-¦   ¦
-¦   +-- nexaopt/
-¦       +-- README.md
-¦       +-- src/
-¦       ¦   +-- nexaopt/
-¦       ¦       +-- __init__.py
-¦       ¦       +-- domain/
-¦       ¦       +-- models/
-¦       ¦       +-- optimization/
-¦       ¦       +-- simulation/
-¦       ¦       +-- performance/
-¦       +-- tests/
-¦       +-- docs/
-¦
-+-- tests/
-¦   ¦
-¦   +-- unit/
-¦   ¦   +-- decision/
-¦   ¦   +-- optimization/
-¦   ¦   +-- evaluation/
-¦   ¦   +-- simulation/
-¦   ¦   +-- performance/
-¦   ¦   +-- replanning/
-¦   ¦
-¦   +-- integration/
-¦   ¦   +-- optimization/
-¦   ¦   +-- simulation/
-¦   ¦   +-- replanning/
-¦   ¦
-¦   +-- cross_domain/
-¦   ¦   +-- forgeopt/
-¦   ¦   +-- navopt/
-¦   ¦   +-- nexaopt/
-¦   ¦
-¦   +-- validation/
-¦       +-- reference_problems/
-¦       +-- benchmarks/
-¦       +-- regression/
-¦
-+-- examples/
-¦   +-- basic/
-¦   +-- optimization/
-¦   +-- dynamic/
-¦   +-- cross_domain/
-¦
-+-- scripts/
-    +-- development/
-    +-- validation/
-    +-- benchmarking/
+├── README.md
+├── LICENSE
+├── pyproject.toml
+│
+├── src/
+│   └── varopt/
+│       ├── core/
+│       │   ├── candidate.py
+│       │   ├── callable_evaluation.py
+│       │   ├── constraint.py
+│       │   ├── decision_space.py
+│       │   ├── evaluation.py
+│       │   ├── evaluation_result.py
+│       │   ├── objective.py
+│       │   ├── optimizer.py
+│       │   └── problem.py
+│       │
+│       └── experiments/
+│           ├── hill_climbing_experiment.py
+│           ├── multi_start_experiment.py
+│           ├── simulated_annealing_experiment.py
+│           └── inventory_evaluation_experiment.py
+│
+├── tests/
+│   ├── core/
+│   └── experiments/
+│
+└── docs/
+    └── phase_5/
+        └── VarOpt_Phase_5_Inventory_Experiment.md
 ```
+
+*The tree above identifies the known core modules and experimental components. It is a logical overview rather than an exhaustive file listing; additional files and directories should be included only after verifying them against the remote repository.*
+
+### Core Platform — `src/varopt/core/`
+
+The core package implements the foundational optimization contracts:
+
+- **Problem definition:** Represents an optimization problem and its decision space.
+- **Candidate decisions:** Represents the decisions being evaluated.
+- **Objectives and constraints:** Defines optimization direction and decision eligibility.
+- **Evaluation:** Evaluates candidate decisions and represents evaluation results.
+- **Optimization:** Searches candidate decisions and selects the best eligible result.
+
+These components form the baseline on which further optimization approaches and domain-specific applications can be developed.
+
+### Experimental Approaches — `src/varopt/experiments/`
+
+The experiments investigate alternative optimization strategies and evaluate their behavior without prematurely expanding or changing the core platform.
+
+The repository includes experiments for:
+
+- Hill climbing.
+- Multi-start optimization.
+- Simulated annealing.
+- Deterministic inventory evaluation over a finite planning horizon.
+
+The inventory experiment extends the investigation into dynamic systems, where candidate decisions are evaluated in the context of an evolving system and its operating constraints. Its implementation and supporting documentation remain distinct from the established core optimization contracts.
+
+### Automated Tests — `tests/`
+
+The test suite validates the platform and its experiments.
+
+- **`tests/core/`** contains tests for core optimization behavior and contracts.
+- **`tests/experiments/`** contains tests for experimental implementations, including their expected behavior, constraints, and edge cases.
+
+Tests provide evidence that changes preserve established behavior and that experiments operate according to their defined requirements.
+
+### Documentation — `docs/`
+
+Documentation records the system definition, implementation decisions, and phase-specific technical details.
+
+Phase-specific documentation provides traceability between an experiment's purpose, its implementation, and its validation. The Phase 5 inventory experiment is documented in `docs/phase_5/VarOpt_Phase_5_Inventory_Experiment.md`.
+
+### Development Configuration
+
+- **`pyproject.toml`** defines the Python project and its development configuration.
+- **`README.md`** provides the project overview, architecture, and development status.
+- **`LICENSE`** contains the repository's licensing information.
+
+The repository's organization preserves a clear distinction between established platform capabilities and experimental work, supporting controlled evolution of VarOpt as additional optimization problems and system dynamics are investigated.
 
 ## Contributing
 
