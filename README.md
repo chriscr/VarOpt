@@ -179,8 +179,11 @@ VarOpt/
 │   └── experiments/
 │
 └── docs/
-    └── phase_5/
-        └── VarOpt_Phase_5_Inventory_Experiment.md
+    ├── phase_5/
+    │   └── VarOpt_Phase_5_Inventory_Experiment.md
+    │
+    └── sds/
+        └── VarOpt_Phase_0_SDS.md
 ```
 
 *The tree above identifies the known core modules and experimental components. It is a logical overview rather than an exhaustive file listing; additional files and directories should be included only after verifying them against the remote repository.*
